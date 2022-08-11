@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  path: MyString
+  played: false
+  note: MyText
+
+two:
+  path: MyString
+  played: false
+  note: MyText
