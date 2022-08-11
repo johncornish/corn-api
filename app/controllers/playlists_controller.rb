@@ -10,7 +10,7 @@ class PlaylistsController < ApplicationController
 
   # GET /playlists/1
   def show
-    render json: @playlist
+    render json: @playlist, include: [:tracks]
   end
 
   # POST /playlists
