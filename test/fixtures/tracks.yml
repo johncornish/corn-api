@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  path: MyString
+  path: MyString 1
   played: false
-  note: MyText
+  note: MyText 2
   playlist_id: 1
 
 two:
-  path: MyString
-  played: false
-  note: MyText
+  path: MyString 2
+  played: true
+  note: MyText 2
   playlist_id: 1

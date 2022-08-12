@@ -2,10 +2,10 @@
 
 one:
   visible_tracks: 1
-  title: MyString
-  description: MyText
+  title: MyString 1
+  description: MyText 1
 
 two:
   visible_tracks: 1
-  title: MyString
-  description: MyText
+  title: MyString 2
+  description: MyText 2

@@ -27,7 +27,7 @@ class PlaylistsController < ApplicationController
   # PATCH/PUT /playlists/1
   def update
     if @playlist.update(playlist_params)
-      render json: @playlist
+      render json: @playlist, include: [:tracks]
     else
       render json: @playlist.errors, status: :unprocessable_entity
     end
@@ -46,6 +46,11 @@ class PlaylistsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def playlist_params
-      params.require(:playlist).permit(:visible_tracks, :title, :description)
+      params.require(:playlist).permit(
+        :visible_tracks,
+        :title,
+        :description,
+        :tracks_attributes => [:id, :path, :played, :note, :playlist_id]
+      )
     end
 end
