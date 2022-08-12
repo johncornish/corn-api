@@ -4,6 +4,7 @@ class CreateTracks < ActiveRecord::Migration[5.2]
       t.string :path
       t.boolean :played
       t.text :note
+      t.integer :playlist_id
 
       t.timestamps
     end

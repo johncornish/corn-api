@@ -4,8 +4,10 @@ one:
   path: MyString
   played: false
   note: MyText
+  playlist_id: 1
 
 two:
   path: MyString
   played: false
   note: MyText
+  playlist_id: 1

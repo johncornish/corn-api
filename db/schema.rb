@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_11_191706) do
+ActiveRecord::Schema.define(version: 2022_08_12_190207) do
 
   create_table "playlists", force: :cascade do |t|
     t.integer "visible_tracks"
@@ -24,10 +24,9 @@ ActiveRecord::Schema.define(version: 2022_08_11_191706) do
     t.string "path"
     t.boolean "played"
     t.text "note"
+    t.integer "playlist_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "position"
-    t.integer "playlist_id"
   end
 
 end
