@@ -2,6 +2,7 @@ require 'test_helper'
 
 class TracksControllerTest < ActionDispatch::IntegrationTest
   setup do
+    @playlist = playlists(:one)
     @track = tracks(:one)
   end
 
@@ -12,7 +13,7 @@ class TracksControllerTest < ActionDispatch::IntegrationTest
 
   test "should create track" do
     assert_difference('Track.count') do
-      post tracks_url, params: { track: { note: @track.note, path: @track.path, played: @track.played, playlist_id: @track.playlist_id } }, as: :json
+      post tracks_url, params: { track: { note: @track.note, path: @track.path, played: @track.played, playlist_id: @playlist.id } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +25,7 @@ class TracksControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update track" do
-    patch track_url(@track), params: { track: { note: @track.note, path: @track.path, played: @track.played, playlist_id: @track.playlist_id } }, as: :json
+    patch track_url(@track), params: { track: { note: @track.note, path: @track.path, played: @track.played, playlist_id: @playlist.id } }, as: :json
     assert_response 200
   end
 
