@@ -50,6 +50,11 @@ jobs:
         uses: ruby/setup-ruby@8f312efe1262fb463d906e9bf040319394c18d3e # v1.92
         with:
           bundler-cache: true
+      - name: Create Binstubs
+        run: |
+          bundle binstubs bundler-audit
+          bundle binstubs brakeman
+          bundle binstubs rubocop
       # Add or replace any other lints here
       - name: Security audit dependencies
         run: bin/bundler-audit --update
