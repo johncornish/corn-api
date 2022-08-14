@@ -46,3 +46,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # CORS because this will always be running as an API
 gem 'rack-cors'
+
+# PostgreSQL
+group :test, :production do
+  gem 'pg'
+end
